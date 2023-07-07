@@ -29,7 +29,7 @@ plt.figure(1)
 plot_sdf(gt1)
 plt.savefig(folder + "gt1.png")
 
-dims = [3, 256,  256, 256, 1]
+dims = [3, 64,  64, 64, 64, 1]
 model = mlp(dims)
 model_str = "mlp" 
 
