@@ -12,6 +12,7 @@ This re-implementation contains two parts
 - 02_MNIST
   
 Within each of the above re-implementation, `main_mlp.py` and `main_lipmlp.py` is the main training script. 
+
 `01__2D_interpolation` contains the script to train a Lipschitz MLP to interpolate 2D signed distance functions of a star and a circle. To train the model from scratch, simply run
 ```python
 python main_lipmlp.py
