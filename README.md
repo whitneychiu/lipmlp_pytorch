@@ -14,6 +14,7 @@ This re-implementation contains two parts
 python main_lipmlp.py
 ```
 After training (~15 min on a CPU), you should see the interpolation results in the sub-folder `mlp` and `lipmlp` and the model parameters in `mlp_params.pt` and `lipmlp_params.pt`.
+
   
 - 02_MNIST
 `02_MNIST` contains the script to train a Lipschitz MLP autoencoder to learn the latent code the all the digits in MNIST by the encoder and using the decoder to reconstruct the digits. `main_mlp.py` and `main_lipmlp.py` is the main training script for a simple mlp and a lipschitz mlp, respectively. To train the model from scratch, simply run
