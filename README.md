@@ -9,7 +9,7 @@ Some functions in the script, such as generating analytical signed distance func
 ### Repository Structure
 This re-implementation contains two parts
 - 01__2D_interpolation 
-`01__2D_interpolation` contains the script to train a Lipschitz MLP to interpolate 2D signed distance functions of a star and a circle. `main_mlp.py` and `main_lipmlp.py` is the main training script for a simple mlp and a lipschitz mlp, respectively. To train the model from scratch, simply run
+`01__2D_interpolation` contains the script to train a Lipschitz MLP to interpolate 2D signed distance functions of a cross and a star. `main_mlp.py` and `main_lipmlp.py` is the main training script for a simple mlp and a lipschitz mlp, respectively. To train the model from scratch, simply run
 ```python
 python main_lipmlp.py
 ```
@@ -29,6 +29,10 @@ model = lipmlp(hyper_params) # build the model
 params = model.initialize_weights() # initialize weights
 y = model.forward(params, latent_code, x) # forward pass
 ```
+
+
+### Results
+![alt text](https://github.com/whitneychiu/lipmlp_pytorch/blob/main/interpolation_comparison.png?raw=true)
 
 ### Contact
 This is my re-implementation of the paper. If there are any questions, please contact **Whitney Chiu** <wchiu@gatech.edu>
