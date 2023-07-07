@@ -3,6 +3,7 @@ sys.path.append("../")
 from models.mlp import mlp
 from utils.sample_2D_grid import sample_2D_grid
 from utils.sdf_circle import sdf_circle
+from utils.sdf_cross import sdf_cross
 from utils.sdf_star import sdf_star
 from utils.plot_sdf import plot_sdf
 import matplotlib.pyplot as plt
@@ -15,7 +16,7 @@ folder = './mlp/'
 
 resolution = 32
 V = sample_2D_grid(resolution) # |V|x2 
-gt0 = sdf_circle(V)
+gt0 = sdf_cross(V)
 gt1 = sdf_star(V)
 latent0 = torch.tensor([0])
 latent1 = torch.tensor([1])
@@ -34,7 +35,7 @@ model_str = "mlp"
 
 loss_func = torch.nn.MSELoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=1e-4)
-num_epochs = 40000
+num_epochs = 200000
 pbar = tqdm(range(num_epochs))
 
 V0 = torch.hstack((V,latent0.repeat(V.shape[0],1))).to(device) # nVx3
