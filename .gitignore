@@ -2,3 +2,4 @@ data/*
 *.pyc
 .DS_Store
 *.pt
+*.npy
